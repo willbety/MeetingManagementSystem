@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://10.10.24.19:3306/li?useSSL=false&autoReconnect=true&timezone=+800&useUnicode=true&characterEncoding=utf8&allowMultiQueries=true
+    username: root
+    password: Aa12345678
+  swagger:
+    title: Spring swagger project
+    version: 1.0.0
+    description: 这是一个Swagger项目
+
+logging:
+  level:
+    org:
+      jooq:
+        tools:
+          LoggerListener: DEBUG

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configuration xmlns="http://www.jooq.org/xsd/jooq-codegen-3.12.0.xsd">
+    <!-- 数据库连接配置 -->
+    <jdbc>
+        <driver>com.mysql.cj.jdbc.Driver</driver>
+        <url>jdbc:mysql://10.10.24.19/li</url>
+        <user>root</user>
+        <password>Aa12345678</password>
+    </jdbc>
+
+    <generator>
+        <name>org.jooq.codegen.JavaGenerator</name>
+        <database>
+            <!-- 数据库的类型，格式为：org.jooq.meta.[database].[database]Database -->
+            <name>org.jooq.meta.mysql.MySQLDatabase</name>
+            <!--数据库名称-->
+            <inputSchema>li</inputSchema>
+            <includes>.*</includes>
+            <excludes></excludes>
+        </database>
+        <generate>
+            <!--是否生成dao和pojo-->
+            <daos>true</daos>
+            <pojos>true</pojos>
+            <!--是否把数据库时间类型映射到java 8时间类型-->
+            <javaTimeTypes>true</javaTimeTypes>
+            <!--<interfaces>true</interfaces>-->
+            <!--是否在生成的代码中添加spring注释，比如@Repository-->
+            <springAnnotations>true</springAnnotations>
+        </generate>
+        <target>
+            <!-- 生成的类的目标目录 -->
+            <directory>src/main/java</directory>
+            <!-- 生成在哪个包名路径下 -->
+            <packageName>com.example.demo</packageName>
+        </target>
+    </generator>
+</configuration>
